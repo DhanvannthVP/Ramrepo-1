@@ -1,4 +1,4 @@
-
+..
 node {
    def sonarUrl = 'sonar.host.url=http://172.31.30.136:9000'
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
@@ -39,7 +39,7 @@ node {
        }
    }
    stage('Email Notification'){
-		mail bcc: '', body: """Hi Team, You build successfully deployed
+		mail bcc: '', body: """Hi Team, You build successfully deployed. Hurrah!!!
 		                       Job URL : ${env.JOB_URL}
 							   Job Name: ${env.JOB_NAME}
 
